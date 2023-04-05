@@ -1,10 +1,12 @@
 :root{
-    --primary-color:  rgb(73, 97, 220);
+    --primary-color:  rgb(0, 0, 0);
     --black: #000;
     --white: #fff;
     --border-color: #EEECEC;
-    --primary-font-family:  'Montserrat', sans-serif;
-    --secondary-font-family: 'Rampart One', cursive;
+    --primary-font-family:  'Trispace', sans-serif;
+    --secondary-font-family: 'Montserrat', cursive;
+    --tertiary-font-family: 'Rampart One', cursive;
+
 }
 
 *{
@@ -21,6 +23,7 @@ body{
     
     font-family: var(--primary-font-family);
     overflow-x: hidden;
+    background-color: whitesmoke;
 }
 
 #main-container{
@@ -55,6 +58,16 @@ section h1{
     color:var(--primary-color);
     margin: 80px 0 60px 0;
 }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 
 .diagonal-cont{
     min-height: 300px;
@@ -126,7 +139,10 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     color: var(--primary-color);
+    background-color: white;
     padding: 10px 5px;
+    position:fixed;
+    width: 100%;
 }
 
 nav > #nav-items >img{
@@ -141,6 +157,7 @@ nav > #nav-items >img{
 
 
 #nav-menus{
+    -webkit-text-fill-color: #000;
     width: 70%;
     /* display: block; */
     display: flex;
@@ -178,11 +195,9 @@ nav ul li a{
 /* ------------------------- Landing Section ------------------------- */
 
 #landing-sec{
-    /* background-color: red; */
     min-height: 60vh;
     grid-area: landing-sec;
-    
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -191,17 +206,9 @@ nav ul li a{
 }
 
 #landing-desc{
+    /* position: fixed; */
+    /* height: 100%; */
     width: 60%;
-   
-}
-
-#landing-desc > span{
-    display: flex;
-    align-items: center;
-}
-
-#landing-desc h2{
-    font-size: 3em;
 }
 
 #landing-desc h2 span{
@@ -213,7 +220,6 @@ nav ul li a{
     margin-right: 5px;
 }
 #landing-right{
-    /* width: 60%; */
     position: relative;
 }
 
@@ -445,6 +451,10 @@ footer{
     color: var(--white);
     line-height: 50px;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 90%;
     
 }
 
@@ -452,7 +462,7 @@ footer a{
     text-decoration: none;
     font-family: var(--secondary-font-family);
     color: #fff;
-    font-size: 22px;
+    font-size: 16px;
     
 }
 
@@ -534,7 +544,7 @@ footer a{
         width: 100%;
     }
     #landing-sec h2{
-        font-size: 1.8em;
+        font-size: 1em;
     }
 
     #landing-desc{
